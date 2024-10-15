@@ -6,6 +6,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      CLIENT_ID: ${{ secrets.CLIENT_ID }}
+      CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+      REDIRECT_URI: ${{ secrets.REDIRECT_URI }}
+      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2

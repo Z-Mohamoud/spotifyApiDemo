@@ -16,7 +16,11 @@ describe('Spotify API Tests', () => {
 
     try {
       // Retrieve access token first
+      if (!process.env.ACCESS_TOKEN){
       accessToken = await getAccessTokenFromFile();
+      } else {
+        accessToken = process.env.ACCESS_TOKEN;
+      }
 
       // Fetch user profile using the access token
       const userProfile = await getUserProfile(accessToken);
