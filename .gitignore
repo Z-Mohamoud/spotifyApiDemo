@@ -7,6 +7,8 @@ build/
 
 # Log files
 *.log
+jest-html-reporters-attach
+access_token.json
 
 # Environment variables
 .env
